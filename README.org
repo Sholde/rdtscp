@@ -1,0 +1,25 @@
+#+title: how to use rdtscp instruction
+#+author: Sholde
+#+date: 26 January 2022
+
+* Compile
+
+  #+begin_src bash
+      $ make
+  #+end_src
+
+* Usage
+
+  Use the ~taskset~ command to pin the process to the desired core.
+  Replace ~N~ with the core id.
+
+  #+begin_src bash
+    $ taskset -c N ./main
+  #+end_src
+
+* Result
+
+  #+begin_src txt
+        cycles: 14054263169265
+  processor id: N
+  #+end_src
